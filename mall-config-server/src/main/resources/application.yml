@@ -1,0 +1,19 @@
+server:
+ port: 8761
+spring:
+  profiles:
+    active: dev
+  application:
+   name: config_server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/forezp/SpringcloudConfig/
+          searchPaths: respo
+          username: trolley
+          password: strongpassword
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka/
