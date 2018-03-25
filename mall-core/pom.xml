@@ -1,0 +1,135 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.mall</groupId>
+	<artifactId>core</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<modules>
+		<!-- 公共UTILS等 -->
+		<module>../mall-common</module>
+		<!-- API公共 -->
+		<module>../mall-common-api</module>
+		<!-- office 相关组件 -->
+		<module>../mall-office</module>
+		<!-- 主架构 -->
+		<module>../mall-framework</module>
+		<!-- 数据库相关家法步 -->
+		<module>../mall-database</module>
+		<!-- 注册中心 -->
+		<module>../mall-eureka-server</module>
+		<!-- 路由器 -->
+		<module>../mall-zuul-server</module>
+		<!-- 服务追踪 -->
+		<module>../mall-zipkin-server</module>
+		<!-- 配置文件管理中心 -->
+		<module>../mall-config-server</module>
+		<!-- 统一用户管理 -->
+		<module>../mall-uums-api</module>
+		<module>../mall-uums-service</module>
+		<!-- 后台维护管理 -->
+		<module>../mall-admin-web</module>
+		
+		
+	</modules>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>io.spring.platform</groupId>
+				<artifactId>platform-bom</artifactId>
+				<version>Brussels-SR7</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Dalston.SR5</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency> 
+			<!-- <groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-dependencies</artifactId>
+		<version>1.5.9.RELEASE</version> -->
+		</dependencies> 
+	</dependencyManagement>
+	<distributionManagement>
+		<repository>
+			<id>user-release</id>
+			<name>User Project Release</name>
+			<url>http://192.168.199.184:6063/nexus/content/repositories/releases/</url>
+		</repository>
+
+		<snapshotRepository>
+			<id>user-snapshots</id>
+			<name>User Project SNAPSHOTS</name>
+			<url>http://192.168.199.184:6063/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+	<build>  
+        <plugins>
+        	<plugin>
+				<!-- 发布插件 -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+			</plugin>
+            <plugin>  
+                <groupId>org.apache.maven.plugins</groupId>  
+                <artifactId>maven-compiler-plugin</artifactId>  
+                <configuration>  
+                    <source>1.8</source>  
+                    <target>1.8</target>  
+                </configuration>  
+            </plugin>
+            <plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>${start-class}</mainClass>
+					<layout>JAR</layout>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<configuration>
+					<forceTags>true</forceTags>
+					<dockerHost>http://www.ouwenjie.com:5555/</dockerHost>
+					<imageName>mall/${project.artifactId}:latest</imageName>
+					<dockerDirectory>src/main/docker</dockerDirectory>
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.jar</include>
+						</resource>
+					</resources>
+				</configuration>
+			</plugin>
+        </plugins>
+    </build> 
+	<profiles>
+		<profile>
+			<id>eureka-server</id>
+			<properties>
+				 <final.project.name>registration-center-first</final.project.name>
+                 <server.port>8881</server.port>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+	</profiles>
+</project>
