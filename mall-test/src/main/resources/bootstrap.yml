@@ -9,9 +9,9 @@ spring:
       uri: http://ouwenjie.com:7062 
       username: admin
       password: admin123
-   #   discovery:
-   #     enabled: true
-     #   serviceId: config_server
+     # discovery:
+      #  enabled: true
+       # serviceId: config_server
 eureka:
   client:
     serviceUrl:
