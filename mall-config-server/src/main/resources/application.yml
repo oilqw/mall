@@ -1,5 +1,5 @@
 server:
- port: 8761
+ port: 8080
 spring:
   profiles:
     active: dev
@@ -7,13 +7,14 @@ spring:
    name: config_server
   cloud:
     config:
+      label: master
       server:
         git:
-          uri: https://github.com/forezp/SpringcloudConfig/
-          searchPaths: respo
-          username: trolley
-          password: strongpassword
+          uri: https://github.com/oilqw/mall/
+          searchPaths: mall-core/config
+          username: oilqw
+          password: Pass1234
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8080/eureka/
+      defaultZone: http://ouwenjie.com:7061/eureka/
