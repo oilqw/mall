@@ -11,34 +11,38 @@
 	</properties>
 	<modules>
 		<!-- 公共UTILS等 -->
-		<module>../mall-common</module>
+		<!-- <module>../mall-common</module> -->
 		<!-- API公共 -->
-		<module>../mall-common-api</module>
-		<!-- office 相关组件 -->
-		<module>../mall-office</module>
-		<!-- 主架构 -->
-		<module>../mall-framework</module>
-		<!-- 数据库相关家法步 -->
-		<module>../mall-database</module>
-		<!-- 注册中心 -->
+<!-- 		<module>../mall-common-api</module>
+ -->		<!-- office 相关组件 -->
+<!-- 		<module>../mall-office</module>
+ -->		<!-- 主架构 -->
+<!-- 		<module>../mall-framework</module>
+ -->		<!-- 数据库相关家法步 -->
+<!-- 		<module>../mall-database</module>
+ -->		<!-- 注册中心 -->
 		<module>../mall-eureka-server</module>
 		<!-- 路由器 -->
-		<module>../mall-zuul-server</module>
-		<!-- 服务追踪 -->
-		<module>../mall-zipkin-server</module>
-		<!-- 配置文件管理中心 -->
-		<module>../mall-config-server</module>
-		<!-- 统一用户管理 -->
-		<module>../mall-uums-api</module>
-		<module>../mall-uums-service</module>
+<!-- 		<module>../mall-zuul-server</module>
+ -->		<!-- 服务追踪 -->
+<!-- 		<module>../mall-zipkin-server</module>
+ -->		<!-- 配置文件管理中心 -->
+<!-- 		<module>../mall-config-server</module>
+ -->		<!-- 统一用户管理 -->
+<!-- 		<module>../mall-uums-api</module>
+		<module>../mall-uums-service</module> -->
 		<!-- 后台维护管理 -->
-		<module>../mall-admin-web</module>
-		
-		
+<!-- 		<module>../mall-admin-web</module>
+ -->
 	</modules>
+	<parent>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-parent</artifactId>
+	    <version>1.5.10.RELEASE</version>
+	</parent>
 	<dependencyManagement>
 		<dependencies>
-			<dependency>
+			 <dependency>
 				<groupId>io.spring.platform</groupId>
 				<artifactId>platform-bom</artifactId>
 				<version>Brussels-SR7</version>
@@ -51,41 +55,38 @@
 				<version>Dalston.SR5</version>
 				<type>pom</type>
 				<scope>import</scope>
-			</dependency> 
-			<!-- <groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-dependencies</artifactId>
-		<version>1.5.9.RELEASE</version> -->
-		</dependencies> 
+			</dependency>
+		</dependencies>
 	</dependencyManagement>
 	<distributionManagement>
 		<repository>
 			<id>user-release</id>
 			<name>User Project Release</name>
-			<url>http://192.168.199.184:6063/nexus/content/repositories/releases/</url>
+			<url>http://ouwenjie.com:6063/nexus/content/repositories/releases/</url>
 		</repository>
 
 		<snapshotRepository>
 			<id>user-snapshots</id>
 			<name>User Project SNAPSHOTS</name>
-			<url>http://192.168.199.184:6063/nexus/content/repositories/snapshots/</url>
+			<url>http://ouwenjie.com:6063/nexus/content/repositories/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
-	<build>  
-        <plugins>
-        	<plugin>
+	<build>
+		<plugins>
+			<plugin>
 				<!-- 发布插件 -->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
 			</plugin>
-            <plugin>  
-                <groupId>org.apache.maven.plugins</groupId>  
-                <artifactId>maven-compiler-plugin</artifactId>  
-                <configuration>  
-                    <source>1.8</source>  
-                    <target>1.8</target>  
-                </configuration>  
-            </plugin>
-            <plugin>
+			 <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
@@ -118,14 +119,14 @@
 					</resources>
 				</configuration>
 			</plugin>
-        </plugins>
-    </build> 
+		</plugins>
+	</build>
 	<profiles>
 		<profile>
 			<id>eureka-server</id>
 			<properties>
-				 <final.project.name>registration-center-first</final.project.name>
-                 <server.port>8881</server.port>
+				<final.project.name>registration-center-first</final.project.name>
+				<server.port>8881</server.port>
 			</properties>
 			<activation>
 				<activeByDefault>true</activeByDefault>
