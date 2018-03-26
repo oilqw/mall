@@ -1,6 +1,6 @@
 FROM stand_jkd18:v1.0
 VOLUME /app
-ADD mall-eureka-server-0.0.1-SNAPSHOT.jar app.jar
+ADD mall-eureka-server.jar app.jar
 ENV JAVA_HOME /app/jdk18
 ENV CLASSPATH $JAVA_HOME/jre/lib/rt.jar:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 ENV PATH $PATH:$JAVA_HOME/bin
