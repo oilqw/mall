@@ -14,6 +14,10 @@ spring:
           searchPaths: mall-core/config
           username: oilqw
           password: Pass1234
+security:
+  user:
+    name: admin
+    password: admin123
 eureka:
   client:
     service-url:
