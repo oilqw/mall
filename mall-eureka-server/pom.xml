@@ -14,7 +14,7 @@
 		<start-class>com.mall.eureka.server.EurekaRun</start-class>
 	</properties>
 	<dependencies>
-	 <!-- 注册中心 -->
+	 <!-- 注册中心 --> 
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>

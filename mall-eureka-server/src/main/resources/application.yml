@@ -5,7 +5,7 @@ spring:
     name: eureka_server 
 eureka:
   instance:
-    hostname: localhost
+    hostname: ouwenjie.com
   client:
     register-with-eureka: false
     fetch-registry: false
