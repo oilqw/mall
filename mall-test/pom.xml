@@ -11,6 +11,7 @@
 	</parent>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<start-class>com.mall.test.App</start-class>
 	</properties>
 
 	<dependencies>
