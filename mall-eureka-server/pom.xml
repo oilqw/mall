@@ -14,7 +14,7 @@
 		<start-class>com.mall.eureka.server.EurekaRun</start-class>
 	</properties>
 	<dependencies>
-	 <!-- 注册中心 --> 
+		<!-- 注册中心 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka-server</artifactId>
@@ -22,5 +22,25 @@
 	</dependencies>
 	<build>
 		<finalName>mall-eureka-server</finalName>
+		<plugins>
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<configuration>
+					<forceTags>true</forceTags>
+					<dockerHost>http://www.ouwenjie.com:5555/</dockerHost>
+					<imageName>mall/${project.artifactId}:latest</imageName>
+					<dockerDirectory>src/main/docker</dockerDirectory>
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.jar</include>
+						</resource>
+					</resources>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>
