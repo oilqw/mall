@@ -1,10 +1,10 @@
 eclipse.preferences.version=1
-encoding//src/main/java=MacRoman
+encoding//src/main/java=UTF-8
 encoding//src/main/java/com/mall/msg/rabbitmq/RabbitConfig.java=UTF-8
 encoding//src/main/java/com/mall/msg/rabbitmq/TestClinet.java=UTF-8
 encoding//src/main/java/com/mall/msg/rabbitmq/TestClinet2.java=UTF-8
 encoding//src/main/java/com/mall/msg/rabbitmq/TestServer.java=UTF-8
 encoding//src/main/resources=MacRoman
-encoding//src/test/java=MacRoman
+encoding//src/test/java=UTF-8
 encoding//src/test/resources=MacRoman
 encoding/<project>=MacRoman
