@@ -7,16 +7,12 @@ spring:
       name: config-client
       label: master
       profile: dev
-      uri: http://ouwenjie.com:7062 
+      #uri: http://ouwenjie.com:7062 
       username: admin
       password: admin123
-     # discovery:
-      #  enabled: true
-       # serviceId: config-server
+      discovery:
+        enabled: true
+        serviceId: configServer
 management:
   security:
     enabled: true
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://ouwenjie.com:7061/eureka/
