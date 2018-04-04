@@ -1,6 +1,5 @@
 server:
-  port: 8082
+  port: 8080
 spring:
-  cloud:
-    config:
-      profile: test
+  application:
+    name: testclient

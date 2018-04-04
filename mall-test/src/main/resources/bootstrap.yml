@@ -1,18 +1,18 @@
 spring:
-  application:
-    name: mall-test
   cloud:
     config:
-      enabled: true
       name: config-client
       label: master
       profile: dev
-      #uri: http://ouwenjie.com:7062 
       username: admin
       password: admin123
       discovery:
         enabled: true
-        serviceId: configServer
+        service-id: configserver
 management:
   security:
     enabled: true
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://ouwenjie.com:7061/eureka
