@@ -20,16 +20,13 @@ security:
     name: admin
     password: admin123
 eureka:
-  instance:
-    lease-renewal-interval-in-seconds: 10
-    lease-expiration-duration-in-seconds: 60
   client:
     service-url:
       defaultZone: http://ouwenjie.com:7061/eureka
   instance:
     prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 60
 management:
   security:
     enabled: false
-    
-    
