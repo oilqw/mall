@@ -4,7 +4,7 @@ spring:
   profiles:
     active: dev
   application:
-   name: configServer
+   name: configserver
   cloud:
     config:
       label: master
@@ -22,7 +22,11 @@ security:
 eureka:
   client:
     service-url:
-      defaultZone: http://ouwenjie.com:7061/eureka/
+      defaultZone: http://ouwenjie.com:7061/eureka
+  instance:
+    prefer-ip-address: true
 management:
   security:
     enabled: false
+    
+    
