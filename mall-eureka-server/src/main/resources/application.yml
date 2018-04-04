@@ -1,9 +1,11 @@
 server:
-  port: 8080
+  port: 7061
 spring:
   application:
     name: eureka_server
 eureka:
+  server:
+    enable-self-preservation: false
   instance:
     hostname: ouwenjie.com
   client:
