@@ -2,7 +2,7 @@ server:
   port: 8080
 spring:
   application:
-    name: eureka_server 
+    name: eureka_server
 eureka:
   instance:
     hostname: ouwenjie.com
