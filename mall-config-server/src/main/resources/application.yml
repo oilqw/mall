@@ -1,5 +1,5 @@
 server:
- port: 8080
+ port: 7062
 spring:
   profiles:
     active: dev
@@ -20,6 +20,9 @@ security:
     name: admin
     password: admin123
 eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 60
   client:
     service-url:
       defaultZone: http://ouwenjie.com:7061/eureka
