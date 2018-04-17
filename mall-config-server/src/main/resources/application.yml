@@ -22,7 +22,7 @@ security:
 eureka:
   client:
     service-url:
-      defaultZone: http://ouwenjie.com:7061/eureka
+      defaultZone: http://192.168.199.184:7061/eureka
   instance:
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 10

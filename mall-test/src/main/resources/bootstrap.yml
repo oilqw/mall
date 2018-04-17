@@ -18,4 +18,4 @@ eureka:
     lease-expiration-duration-in-seconds: 60
   client:
     serviceUrl:
-      defaultZone: http://ouwenjie.com:7061/eureka
+      defaultZone: http://192.168.199.184:7061/eureka
