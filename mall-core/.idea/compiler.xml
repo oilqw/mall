@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="mall-admin-web" />
+        <module name="mall-common" />
+        <module name="mall-common-api" />
+        <module name="mall-config-server" />
+        <module name="mall-database" />
+        <module name="mall-eureka-server" />
+        <module name="mall-framework" />
+        <module name="mall-test" />
+        <module name="mall-uums-api" />
+        <module name="mall-uums-service" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
