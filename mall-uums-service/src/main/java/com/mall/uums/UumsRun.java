@@ -9,7 +9,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableEurekaClient
 @ServletComponentScan("com.mall.db.filter")
 public class UumsRun {
-	public static void main(String[] args) {
-		SpringApplication.run(UumsRun.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(UumsRun.class, args);
+    }
 }

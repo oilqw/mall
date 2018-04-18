@@ -12,22 +12,26 @@
     </properties>
     <modules>
         <!-- 公共UTILS等 -->
-        <!--<module>../mall-common</module>-->
+        <module>../mall-common</module>
         <!-- API公共 -->
-        <!--<module>../mall-common-api</module>	-->    <!-- office 相关组件 -->
-        <!-- <module>../mall-office</module> -->        <!-- 主架构 -->
-        <!-- <module>../mall-framework</module>	-->    <!-- 数据库相关家法步 -->
-        <!--<module>../mall-database</module>-->        <!-- 注册中心 -->
+        <module>../mall-common-api</module>   <!-- office 相关组件 -->
+        <!-- <module>../mall-office</module> -->
+        <!-- 主架构 -->
+        <module>../mall-framework</module>
+        <!-- 数据库相关家法步 -->
+        <module>../mall-database</module>
+        <!-- 注册中心 -->
         <module>../mall-eureka-server</module>
         <!-- 路由器 -->
         <!-- <module>../mall-zuul-server</module> -->        <!-- 服务追踪 -->
         <!-- <module>../mall-zipkin-server</module> -->
         <!-- 配置文件管理中心 -->
-        <module>../mall-config-server</module>   <!-- 统一用户管理 -->
-        <!--<module>../mall-uums-api</module>
-        <module>../mall-uums-service</module>-->
+        <module>../mall-config-server</module>
+        <!-- 统一用户管理 -->
+        <module>../mall-uums-api</module>
+        <module>../mall-uums-service</module>
         <!-- 后台维护管理 -->
-        <!-- <module>../mall-admin-web</module> -->
+        <module>../mall-admin-web</module>
         <module>../mall-test</module>
     </modules>
     <parent>
