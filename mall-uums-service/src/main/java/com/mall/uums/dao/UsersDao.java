@@ -9,7 +9,7 @@ public interface UsersDao extends JpaRepository<Users,Integer>{
 	  
 	 @Query("select a from Users a where a.id = ?1") 
 	 Users findByAccountId(Integer accountId);
-	 //User findByName(String name);
+	 Users findByUsername(String name);
 
 	 //User findByNameAndAge(String name, Integer age);
 }

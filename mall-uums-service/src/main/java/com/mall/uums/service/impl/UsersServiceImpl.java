@@ -16,7 +16,7 @@ public class UsersServiceImpl implements UsersService{
 		return user;
 	}
 	public String testadd(){
-		Users user=usersDao.findByAccountId(1);
+		Users user=usersDao.findByUsername("22");
 		return user.getUsername();
 	} 
 	public String sayHiFromClientOne(String name) {
