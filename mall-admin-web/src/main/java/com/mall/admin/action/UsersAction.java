@@ -6,6 +6,7 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
+import com.mall.uums.model.Users;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +31,12 @@ public class UsersAction {
 		String s=usersService.sayHiFromClientOne("abcd");
 		System.out.println(s);
 		return s; 
+	}
+	@ResponseBody
+	@RequestMapping(value="test")
+	public String testss(){
+		Users user=usersService.testa();
+		return user.getUsername();
 	}
 /*	@ResponseBody
 	@RequestMapping(value="hello")

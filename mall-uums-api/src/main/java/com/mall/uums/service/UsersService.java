@@ -6,8 +6,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.mall.uums.model.Users;
 public interface UsersService {
-	/*@RequestMapping(value = "test", method = RequestMethod.GET)
-	public Users testa();*/
 	@RequestMapping(value = "usersService-remote/hi",method = RequestMethod.GET)
     String sayHiFromClientOne(@RequestParam(value = "name") String name);
 	@RequestMapping(value = "usersService-remote/test",method = RequestMethod.GET)
