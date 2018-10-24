@@ -9,8 +9,11 @@
     <file url="file://$PROJECT_DIR$/../mall-database" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../mall-eureka-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../mall-framework" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mall-office" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../mall-test" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../mall-uums-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../mall-uums-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mall-zipkin-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mall-zuul-server" charset="UTF-8" />
   </component>
 </project>

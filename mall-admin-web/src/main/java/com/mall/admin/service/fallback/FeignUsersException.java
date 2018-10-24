@@ -13,8 +13,8 @@ public class FeignUsersException implements FeignUserService{
 
 	@Override
 	public Users testa() {
-		// TODO Auto-generated method stub
-		return null;
+		System.out.println("baocuo------------");
+		return new Users();
 	}
 
 	@Override

@@ -14,17 +14,18 @@
         <!-- 公共UTILS等 -->
         <module>../mall-common</module>
         <!-- API公共 -->
-        <module>../mall-common-api</module>   <!-- office 相关组件 -->
-        <!-- <module>../mall-office</module> -->
+        <module>../mall-common-api</module>
+        <!-- office 相关组件 -->
+         <module>../mall-office</module>
         <!-- 主架构 -->
         <module>../mall-framework</module>
-        <!-- 数据库相关家法步 -->
+        <!-- 数据库相关 -->
         <module>../mall-database</module>
         <!-- 注册中心 -->
         <module>../mall-eureka-server</module>
         <!-- 路由器 -->
-        <!-- <module>../mall-zuul-server</module> -->        <!-- 服务追踪 -->
-        <!-- <module>../mall-zipkin-server</module> -->
+         <module>../mall-zuul-server</module>         <!-- 服务追踪 -->
+         <module>../mall-zipkin-server</module>
         <!-- 配置文件管理中心 -->
         <module>../mall-config-server</module>
         <!-- 统一用户管理 -->
@@ -37,21 +38,21 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.10.RELEASE</version>
+        <version>2.0.3.RELEASE</version>
     </parent>
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>io.spring.platform</groupId>
                 <artifactId>platform-bom</artifactId>
-                <version>Brussels-SR7</version>
+                <version>Cairo-SR5</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Dalston.SR5</version>
+                <version>Finchley.RELEASE</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -119,7 +120,7 @@
             </plugin>
         </plugins>
     </build>
-    <profiles>
+<!--    <profiles>
         <profile>
             <id>eureka-server</id>
             <properties>
@@ -130,5 +131,5 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
         </profile>
-    </profiles>
+    </profiles>-->
 </project>

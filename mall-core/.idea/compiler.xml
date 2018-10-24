@@ -13,9 +13,12 @@
         <module name="mall-database" />
         <module name="mall-eureka-server" />
         <module name="mall-framework" />
+        <module name="mall-office" />
         <module name="mall-test" />
         <module name="mall-uums-api" />
         <module name="mall-uums-service" />
+        <module name="mall-zipkin-server" />
+        <module name="mall-zuul-server" />
       </profile>
     </annotationProcessing>
   </component>

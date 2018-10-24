@@ -15,14 +15,14 @@ spring:
           username: oilqw
           password: Pass1234
           clone-on-start: true
-security:
-  user:
-    name: admin
-    password: admin123
+  security:
+    user:
+      name: admin
+      password: admin123
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.199.184:7061/eureka
+      defaultZone: http://localhost:7061/eureka
   instance:
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 10
